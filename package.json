@@ -15,11 +15,8 @@
   "dependencies": {
     "backbone": "^1.2.0",
     "backbone.babysitter": "^0.1.12",
-    "backbone.marionette": "^2.4.7",
     "backbone.wreqr": "^1.4.0",
     "handlebars": "^4.0.6",
-    "jade": "^1.11.0",
-    "jade-browser": "0.0.14",
     "jquery": "^3.2.1",
     "js-cookie": "^2.1.4",
     "moment": "^2.18.1",

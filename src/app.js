@@ -1,7 +1,6 @@
 let $ = require('jquery'),
   Backbone = require('backbone'),
   Handlebars = require('hbsfy/runtime'),
-  Marionette = require('backbone.marionette'),
   Cookies = require('js-cookie');
 
 Backbone.$ = $;
