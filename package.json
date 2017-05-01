@@ -1,0 +1,36 @@
+{
+  "name": "oms-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify src/app.js -t babelify -t hbsfy -o dist/app.js",
+    "watch": "watchify src/app.js -v -d -t babelify -t hbsfy -o dist/app.js",
+    "start": "serve dist/ -p 8080",
+    "dev": "npm run watch & npm run start",
+    "scss": "node-sass --output-style compressed -o dist/css src/stylesheets"
+  },
+  "author": "Seth Musulin",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.2.0",
+    "backbone.babysitter": "^0.1.12",
+    "backbone.marionette": "^2.4.7",
+    "backbone.wreqr": "^1.4.0",
+    "handlebars": "^4.0.6",
+    "jade": "^1.11.0",
+    "jade-browser": "0.0.14",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
+    "hbsfy": "^2.7.0",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "serve": "^5.1.4",
+    "watchify": "^3.9.0"
+  }
+}

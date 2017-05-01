@@ -1,0 +1,22 @@
+<a class="message-list" href="#mailboxes/{{mid}}/folders/{{folder_id}}/threads/{{thread_id}}"data-mid={{mid}} data-folder={{folder_id}} data-thread=""{{thread_id}}>
+    <div class="thread-icons"><i class="icon-unread fa fa-circle"></i><i class="icon-attachment fa fa-paperclip"></i>
+    </div>
+    <div class="thread-info">
+        <div class="thread-header">
+            <span class="thread-timestamp pull-right text-right">
+                {{ date_updated}}
+            </span>
+            <span class="sender_or_recipients">
+                {{sender_email}}
+            </span>
+        </div>
+        <div class="thread-subject" title="subject">
+            {{subject}}
+        </div>
+        <div class="thread-message-count">
+            {{message_count}}
+            &nbsp;
+            <i class="fa.fa-angle-right"></i>
+        </div>
+    </div>
+</a>
