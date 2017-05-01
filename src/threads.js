@@ -33,9 +33,9 @@ class ThreadsView extends Backbone.View {
 
   navigate(e) {
     e.preventDefault();
-    let messages = new MessagesView({el: $('#drawer-content')});
+    this.$el.find('#threads').addClass('hide');
+    let messages = new MessagesView({el: $('#messages-home')});
     messages.render();
-    $("#drawer-content").animate({"margin-right": 0}, "slow")
   }
 }
 

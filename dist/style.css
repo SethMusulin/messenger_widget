@@ -14,34 +14,3 @@ hr { margin-top: 5px;margin-bottom: 10px; }
 .ad { padding: 5px;background: #F5F5F5;color: #222;font-size: 80%;border: 1px solid #E5E5E5; }
 .ad a.title {color: #15C;text-decoration: none;font-weight: bold;font-size: 110%;}
 .ad a.url {color: #093;text-decoration: none;}
-
-#drawer {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    overflow-x: hidden; /* Needed for initial hidden state */
-    overlfow-y: scroll;
-    background-color: white;
-}
-#drawer > div {
-    height: 100%;
-    border-left: 4px solid black;
-    float: left;
-}
-
-#drawer-handle:after {
-    content: "<";
-    position: absolute;
-    top: 50%;
-    padding: 2px;
-}
-
-#drawer-content {
-    width:         800px;
-    margin-right: -800px; /* -width */
-    background-color: white;
-}
-#drawer-content > p {
-    padding: 10px;
-}

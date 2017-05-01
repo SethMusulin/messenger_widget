@@ -1,19 +1,23 @@
 let Backbone = require('backbone');
-let $ = require('jquery')
+let $ = require('jquery');
 
 let messagesViewTemplate = require('./templates/messages.hbs');
 let messageViewTemplate = require('./templates/message.hbs');
 
 class MessagesView extends Backbone.View {
-  events(){return {
-    'click .close': 'close'}
+  events() {
+    return {
+      'click .trigger-close': 'close'
+    }
   }
+
   render() {
     this.$el.html(messagesViewTemplate());
-    this.$el.addClass('show');
     let that = this;
     let $list = this.$el.find('#messages');
     this.collection.fetch().done(function () {
+      that.$el.find('.loading-text').addClass('hide');
+      that.$el.find('.trigger-close').removeClass('hide');
       that.collection.forEach((message) => {
         $list.append(new MessageView({model: message}).render().el);
       });
@@ -27,8 +31,10 @@ class MessagesView extends Backbone.View {
     this.collection.on("reset", this.render, this);
   }
 
-  close(){
-    this.$el.removeClass('show');
+  close(e) {
+    e.preventDefault();
+    this.$el.find('.message-item').remove();
+    $('#threads').removeClass('hide')
   }
 }
 
@@ -42,7 +48,6 @@ class MessageView extends Backbone.View {
   }
 
   render() {
-    console.log('I got called');
     this.$el.html(messageViewTemplate(this.model.attributes));
     return this;
   }
